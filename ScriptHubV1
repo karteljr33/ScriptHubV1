@@ -26,10 +26,17 @@ local Window = Rayfield:CreateWindow({
       Subtitle = "Obtain Key In Discord",
       Note = "Use Misc To Get Key", -- Use this to tell the user how to get a key
       FileName = "Key", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
-      SaveKey = true, -- The user's key will be saved, but if you change the key, they will be unable to use your script
+      SaveKey = false, -- The user's key will be saved, but if you change the key, they will be unable to use your script
       GrabKeyFromSite = true, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
       Key = {"https://pastebin.com/raw/tuu8uGBW"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
    }
+})
+
+local Button = KeySysTab:CreateButton({
+   Name = "🔑|Get ScriptHubV1 Key",
+   Callback = function()
+loadstring(game:HttpGet("https://discord.gg/6T9Gbwsuxr",true))()
+   end,
 })
 
 local MainTab = Window:CreateTab("⚙️| Main", nil) -- Title, Image
@@ -13524,5 +13531,15 @@ local Button = SouthBronxTab:CreateButton({
    Name = "COMPOUND V",
    Callback = function()
    pcall(loadstring(game:HttpGet("https://pastebin.com/raw/rHUdVp8y")))
+   end,
+})
+
+local RivalsTab = Window:CreateTab("🛡️| Rivals", nil) -- Title, Image
+local Section = RivalsTab:CreateSection("Rivals")
+
+local Button = RivalsTab:CreateButton({
+   Name = "Rivals Roblox GUI",
+   Callback = function()
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/Sheeshablee73/Scriptss/main/Rivals%20Latest.lua",true))() 
    end,
 })
